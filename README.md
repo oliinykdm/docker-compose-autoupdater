@@ -145,7 +145,7 @@ Notification Setup
 ------------------
 
 * Ensure your SNS topic exists and has active subscriptions (Email, SMS, etc.).
-* Update SNS_TOPIC_ARN in the script with your actual ARN.
+* Update `SNS_TOPIC_ARN` in the script with your actual ARN.
 * The EC2 instance IAM Role must allow `sns:Publish` action on that topic.
     
 
