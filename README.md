@@ -80,7 +80,9 @@ WantedBy=multi-user.target
 
 ### 6. Systemd Timer
 
-`sudo nano /etc/systemd/system/docker-compose-update.timer`
+```bash
+sudo nano /etc/systemd/system/docker-compose-update.timer
+```
 
 ```ini
 [Unit]
