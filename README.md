@@ -1,5 +1,8 @@
 # Docker Compose Auto Update
 
+<img width="1247" height="106" alt="image" src="https://github.com/user-attachments/assets/39473a15-b630-4971-8f11-ecee386e85f7" />
+
+
 Automatic daily update of Docker Compose services on Amazon Linux 2023 (I used it on Bastion Host).
 
 The solution runs once per day using a native **systemd timer**. No third-party tools are required.
