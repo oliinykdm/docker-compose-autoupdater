@@ -40,11 +40,11 @@ sudo chown docker-updater:docker /var/log/docker-compose-update.log
 sudo chmod 664 /var/log/docker-compose-update.log
 ```
 
-### 3. Create Update Script
+### 3. Copy Update Script
 
 Copy `update-docker-compose.sh` from the root of the repo to `/usr/local/bin/update-docker-compose.sh`
 
-### 4. Create Update Script
+### 4. Apply a correct permissions
 
 ```bash
 sudo chmod +x /usr/local/bin/update-docker-compose.sh
