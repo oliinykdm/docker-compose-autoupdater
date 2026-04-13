@@ -116,6 +116,8 @@ sudo systemctl enable --now docker-compose-update.timer
 ```
 sudo systemctl status docker-compose-update.timer
 ```
+<img width="891" height="111" alt="image" src="https://github.com/user-attachments/assets/272640e8-0b17-4e4c-92cd-351eecc75801" />
+
 
 ### List active timers
 ```
