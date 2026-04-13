@@ -15,15 +15,23 @@ The solution runs once per day using a native **systemd timer**. No third-party 
 - Detailed logging to `/var/log/docker-compose-update.log`
 - Supports multiple Docker Compose projects
 - Secure and fully native (no root privileges for the script)
-
 ## Requirements
 
-- Amazon Linux 2023
-- Docker and Docker Compose installed
-- IAM Role with `sns:Publish` permission on the target SNS topic
-- User must be in the `docker` group
+* **OS:** Amazon Linux 2023, Ubuntu, Debian, or any modern Linux with `systemd`
+* **Packages:** `docker`, `docker-compose-plugin`, and `awscli` (AWS CLI is strictly required for SNS notifications)
+* **AWS Permissions:**
+  * **On AWS EC2:** Attach an IAM Role to your instance with the `sns:Publish` permission for your target SNS topic.
+  * **Outside AWS (On-Prem/HomeLab):** You must configure AWS credentials using `aws configure` for the `docker-updater` user.
+* **Groups:** The `docker-updater` user must be a member of the `docker` group.
 
 ## Setup
+
+### 0. Install Prerequisites (Non-Amazon Linux)
+If you are using Ubuntu/Debian, ensure you have the AWS CLI installed:
+```bash
+sudo apt-get update
+sudo apt-get install awscli
+```
 
 ### 1. Create Dedicated User
 
