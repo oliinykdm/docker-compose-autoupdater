@@ -9,10 +9,6 @@ LOGFILE="/var/log/docker-compose-update.log"
 NTFY_URL="https://ntfy.sh/topic-*"
 NTFY_BEARER_TOKEN="tk_xxxx"
 
-# SNS Configuration
-SNS_TOPIC_ARN="arn:aws:sns:eu-central-1:123456789012:Topic"
-EMAIL_SUBJECT="Docker Compose Update Report - $(hostname)"
-
 # ========================================================
 
 echo "=== Docker Compose Update started at $(date) on $(hostname) by $(whoami) ===" | tee -a "$LOGFILE"
